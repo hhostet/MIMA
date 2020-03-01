@@ -1,0 +1,7 @@
+{
+  "name": "MIMA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

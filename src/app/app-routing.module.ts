@@ -9,6 +9,18 @@ const routes: Routes = [
   {
     path: 'module-zero',
     loadChildren: () => import('./module-zero/module-zero.module').then( m => m.ModuleZeroPageModule)
+  },
+  {
+    path: 'module-one',
+    loadChildren: () => import('./module-one/module-one.module').then( m => m.ModuleOnePageModule)
+  },
+  {
+    path: 'module-two',
+    loadChildren: () => import('./module-two/module-two.module').then( m => m.ModuleTwoPageModule)
+  },
+  {
+    path: 'module-three',
+    loadChildren: () => import('./module-three/module-three.module').then( m => m.ModuleThreePageModule)
   }
 ];
 @NgModule({

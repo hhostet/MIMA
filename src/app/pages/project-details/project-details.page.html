@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/project-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{project.skill_used}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">
+      Skill Used
+    </ion-label>
+    <ion-input [(ngModel)]="project.skill_used"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="stacked">
+        Description
+      </ion-label>
+      <ion-textarea [(ngModel)]="project.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="stacked">
+        Effects of Using the Skill
+      </ion-label>
+      <ion-textarea [(ngModel)]="project.effect"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+      <!-- <ion-label >
+        Date
+      </ion-label >
+      <ion-input [(ngModel)]="project.date"></ion-input> -->
+
+      <ion-label position="stacked">Date</ion-label>
+      <ion-datetime [(ngModel)]="project.date" displayFormat="MMMM/DD/YYYY" pickerFormat="MMM/DD/YYYY" yearValues="2019,2020,2021,2022,2023"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="stacked">Time</ion-label>
+      <ion-datetime color="dark" [(ngModel)]="project.time" displayFormat="hh:mm A" minuteValues="0,15,30,45">Time</ion-datetime> 
+    </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">
+      Location
+    </ion-label> 
+   
+    <ion-input [(ngModel)]="project.location"></ion-input>
+    {{ lat }} {{ long }}
+    <ion-button slot="end" (click)="getGeoLocation()"><ion-icon name="pin"></ion-icon></ion-button>
+  </ion-item>
+
+  <ion-footer *ngIf="!project.id">
+      <ion-toolbar>
+        <ion-button expand="full" fill="solid" shape="round" (click)="addProject()">
+          <ion-title>Create Log</ion-title>
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
+</ion-content>
+
+<ion-footer *ngIf="project.id">
+    
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button color="danger" (click)="deleteProject()">
+            <ion-icon name="trash"></ion-icon>
+          </ion-fab-button>
+    </ion-fab> 
+    
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+          <ion-fab-button color="success" (click)="updateProject()">
+             <ion-icon name="save"></ion-icon>
+          </ion-fab-button>
+    </ion-fab>
+
+   
+</ion-footer>

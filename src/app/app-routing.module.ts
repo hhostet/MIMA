@@ -61,8 +61,12 @@ const routes: Routes = [
   {
     path: 'module-zero',
     loadChildren: () => import('./pages/module-zero/module-zero.module').then( m => m.ModuleZeroPageModule)
+  },
+  {
+    path: 'user-account',
+    loadChildren: () => import('./pages/user-account/user-account.module').then( m => m.UserAccountPageModule)
   }
-
+  
 ];
 
 @NgModule({

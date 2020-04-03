@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthService } from './services/auth.service'
 const routes: Routes = [
   {
     path: '',
@@ -64,9 +64,20 @@ const routes: Routes = [
   },
   {
     path: 'user-account',
-    loadChildren: () => import('./pages/user-account/user-account.module').then( m => m.UserAccountPageModule)
+    loadChildren: () => import('./pages/user-account/user-account.module').then( m => m.UserAccountPageModule), canActivate:[AuthService],
+  },
+  {
+    path: 'uploader',
+    loadChildren: () => import('./pages/uploader/uploader.module').then( m => m.UploaderPageModule)
+  },
+  {
+    path: 'feed',
+    loadChildren: () => import('./pages/feed/feed.module').then( m => m.FeedPageModule)
+  },
+  {
+    path: 'log-post/:id',
+    loadChildren: () => import('./pages/log-post/log-post.module').then( m => m.LogPostPageModule)
   }
-  
 ];
 
 @NgModule({

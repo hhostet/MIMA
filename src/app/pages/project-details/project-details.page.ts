@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { UserService } from './../../services/user.service';
 
 const { Geolocation } = Plugins;
 
@@ -30,6 +32,8 @@ export class ProjectDetailsPage implements OnInit {
     private ps: ProjectServiceService,
     private toastCtrl: ToastController,
     private router: Router,
+    public afstore: AngularFirestore,
+    public user: UserService,
     ){
     }
 

@@ -23,22 +23,24 @@ password:  string = ""
     ) { }
 
   ngOnInit() {
+
+    
   }
 
   async login () {
     const { username, password } = this
     try {
       const res = await this.afAuth.auth.signInWithEmailAndPassword(username, password)
-      console.dir("successful login")
-      this.router.navigateByUrl('/modules-list');
 
       if(res.user){
         this.user.setUser({
           username,
           uid: res.user.uid
         })
+        this.router.navigateByUrl('/uploader');
       }
 
+      console.dir("successful login")
     } catch(err) {
 			console.dir(err)
 			if(err.code) {

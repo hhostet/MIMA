@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>log-post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="post | async as postData">
+    <ion-card-content>
+      <p>{{postID}}</p>
+      <p>{{ postData.Desc}}</p>
+    </ion-card-content>
+    
+  </ion-card>
+</ion-content>

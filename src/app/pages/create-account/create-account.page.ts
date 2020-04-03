@@ -51,11 +51,9 @@ export class CreateAccountPage implements OnInit {
         uid: res.user.uid
       })
 
-      
-
       console.log(res)
       console.dir("successful login")
-      this.router.navigateByUrl('/modules-list');
+
     } catch(err) {
 			console.dir(err)
 			if(err.code === "auth/email-already-in-use") {

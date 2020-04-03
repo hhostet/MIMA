@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
@@ -28,9 +29,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: FirestoreSettingsToken, useValue: {} },
-    UserService
+    UserService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

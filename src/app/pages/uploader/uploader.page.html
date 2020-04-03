@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Uploader</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+  
+    <ion-card-content>
+      <ion-textarea placeholder="Enter some image" [(ngModel)]="image"></ion-textarea>
+      <ion-textarea placeholder="Enter some description" [(ngModel)]="desc"></ion-textarea>
+      <ion-button shape="round" (click)="createPost()">Post</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/user-account">Go to user profile</ion-button>
+</ion-content>

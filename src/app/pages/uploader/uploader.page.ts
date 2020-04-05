@@ -19,21 +19,21 @@ export class UploaderPage implements OnInit {
   skillUsed: string; 
   date: string;
   effect: string;
-
+  
   constructor(
     public afstore: AngularFirestore,
     public user: UserService,
     private router: Router,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private activatedRoute:ActivatedRoute,
   ) { }
 
   ngOnInit() {
-
+   
   }
 
  createPost() {
     const desc = this.desc
-    const image = this.image
     const skillUsed = this.skillUsed
     const date = this.date
     const effect = this.effect
@@ -41,10 +41,11 @@ export class UploaderPage implements OnInit {
     console.log("clicked")
 
     this.afstore.doc(`users/${this.user.getUID()}`).update({
-      posts: firestore.FieldValue.arrayUnion(image)
+      posts: firestore.FieldValue.arrayUnion(date)
+
     })
 
-    this.afstore.doc(`posts/${image}`).set({
+    this.afstore.doc(`posts/${date}`).set({
       skillUsed,
       desc,
       date,

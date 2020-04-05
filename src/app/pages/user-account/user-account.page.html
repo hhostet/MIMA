@@ -16,7 +16,7 @@
  <div id="images">
     <div class="image" *ngFor="let post of ((userPosts | async)?.posts)">
       <ion-card (click)="goTo(post)">
-            <ion-card-content>{{post}}</ion-card-content>
+            <ion-card-content>{{post | date: "MMMM dd yyyy"}}</ion-card-content>
       </ion-card>
     </div>
   </div>

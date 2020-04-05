@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>log-post</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/user-account"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +11,11 @@
   <ion-card *ngIf="post | async as postData">
     <ion-card-content>
       <p>{{postID}}</p>
-      <p>{{ postData.Desc}}</p>
+      <p>{{ postData.author }}</p>
+      <p>{{ postData.date | date: "MMMM dd yyyy"}}</p>
+      <p>{{ postData.skillUsed }}</p>
+      <p>{{ postData.desc }}</p>
+      <p>{{ postData.effect }}</p>
     </ion-card-content>
     
   </ion-card>

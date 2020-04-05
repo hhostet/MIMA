@@ -68,7 +68,7 @@ const routes: Routes = [
   },
   {
     path: 'uploader',
-    loadChildren: () => import('./pages/uploader/uploader.module').then( m => m.UploaderPageModule)
+    loadChildren: () => import('./pages/uploader/uploader.module').then( m => m.UploaderPageModule), canActivate:[AuthService]
   },
   {
     path: 'feed',

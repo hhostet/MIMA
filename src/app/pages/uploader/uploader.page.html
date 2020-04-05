@@ -1,7 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Uploader</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/user-account"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Create a New Log</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
@@ -9,11 +13,30 @@
   <ion-card>
   
     <ion-card-content>
-      <ion-textarea placeholder="Enter some image" [(ngModel)]="image"></ion-textarea>
-      <ion-textarea placeholder="Enter some description" [(ngModel)]="desc"></ion-textarea>
+      <ion-item>
+        <ion-label position="stacked">Image</ion-label>
+        <ion-input [(ngModel)]="image"></ion-input>
+      </ion-item>
+      <ion-item>    
+        <ion-label position="stacked">Date</ion-label>
+        <ion-datetime [(ngModel)]="date" displayFormat="MMMM/DD/YYYY" pickerFormat="MMM/DD/YYYY" yearValues="2019,2020,2021,2022,2023"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Skill Used</ion-label>
+        <ion-input [(ngModel)]="skillUsed"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Description</ion-label>
+        <ion-textarea [(ngModel)]="desc"></ion-textarea>
+      </ion-item>  
+      <ion-item>
+        <ion-label position="stacked">
+            Effects of Using the Skill
+        </ion-label>
+        <ion-textarea [(ngModel)]="effect"></ion-textarea>
+      </ion-item>
+      <br>
       <ion-button shape="round" (click)="createPost()">Post</ion-button>
     </ion-card-content>
   </ion-card>
-
-  <ion-button routerLink="/user-account">Go to user profile</ion-button>
 </ion-content>

@@ -37,7 +37,7 @@ password:  string = ""
           username,
           uid: res.user.uid
         })
-        this.router.navigateByUrl('/uploader');
+        this.router.navigateByUrl('/modules-list');
       }
 
       console.dir("successful login")

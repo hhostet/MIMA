@@ -5,6 +5,7 @@ import { Component, OnInit,  ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { firestore } from 'firebase';
 import { ToastController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-uploader',
@@ -15,10 +16,14 @@ export class UploaderPage implements OnInit {
 
   desc: string;
   image: string;
+  skillUsed: string; 
+  date: string;
+  effect: string;
 
   constructor(
     public afstore: AngularFirestore,
     public user: UserService,
+    private router: Router,
     private toastCtrl: ToastController
   ) { }
 
@@ -29,6 +34,9 @@ export class UploaderPage implements OnInit {
  createPost() {
     const desc = this.desc
     const image = this.image
+    const skillUsed = this.skillUsed
+    const date = this.date
+    const effect = this.effect
 
     console.log("clicked")
 
@@ -37,11 +45,14 @@ export class UploaderPage implements OnInit {
     })
 
     this.afstore.doc(`posts/${image}`).set({
+      skillUsed,
       desc,
+      date,
+      effect,
       author: this.user.getUsername(),
 		})
-
-    this.showToast("Posted");
+    this.router.navigateByUrl('/user-account');
+    this.showToast("A new log has been created");
     
   }
 

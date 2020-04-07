@@ -10,19 +10,13 @@
 </ion-header>
 
 <ion-content >
- <!--  <ion-button routerLink="/login">Login</ion-button>
-  <ion-button routerLink="/create-account">Signup</ion-button> -->
-  
- <div id="images">
-    <div class="image" *ngFor="let post of ((userPosts | async)?.posts)">
+  <div id="images"  *ngIf="posts">
+    <div class="image" *ngFor="let post of posts">
       <ion-card (click)="goTo(post)">
             <ion-card-content>{{post | date: "MMMM dd yyyy"}}</ion-card-content>
       </ion-card>
     </div>
   </div>
-
-
-
 </ion-content>
 
  <ion-tab-bar slot="bottom">
@@ -36,7 +30,7 @@
       <ion-label>Log</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button routerLink="/">
+    <ion-tab-button routerLink="/profile-page">
       <ion-icon name="person"></ion-icon>
       <ion-label>Account</ion-label>
     </ion-tab-button>

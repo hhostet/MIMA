@@ -1,3 +1,4 @@
+import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Injectable } from '@angular/core'
 import { first } from 'rxjs/operators'
@@ -24,11 +25,21 @@ export class UserService {
         return this.user.username
     }
 
+    reAuth(username: string, password:string){
+        return this.afAuth.auth.currentUser.reauthenticateWithCredential(auth.EmailAuthProvider.credential(username, password))
+    }
+
+    updatePassword(newpassword: string){
+        return this.afAuth.auth.currentUser.updatePassword(newpassword)
+    }
+
+    updateEmail(newemail: string) {
+        return this.afAuth.auth.currentUser.updateEmail(newemail)
+    }
+
     async isAuthenticated() {
         if(this.user) return true 
-
         const user = await this.afAuth.authState.pipe(first()).toPromise()
-
         if(user) {
             this.setUser({
                 username: user.email.split('@')[0],

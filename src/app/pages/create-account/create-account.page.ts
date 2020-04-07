@@ -53,7 +53,8 @@ export class CreateAccountPage implements OnInit {
 
       console.log(res)
       console.dir("successful login")
-
+      this.router.navigateByUrl('/modules-list');
+      this.showToast("Welcome aboard!");
     } catch(err) {
 			console.dir(err)
 			if(err.code === "auth/email-already-in-use") {

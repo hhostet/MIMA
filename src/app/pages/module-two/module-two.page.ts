@@ -44,8 +44,8 @@ export class ModuleTwoPage implements OnInit {
       
       
 		}) 
-    this.router.navigateByUrl('/user-account');
-    this.showToast("A new log has been created");
+  
+    this.showToast("This exercise has been submitted!");
     
   }
 

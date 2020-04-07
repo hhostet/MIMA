@@ -4,7 +4,7 @@ import { AuthService } from './services/auth.service'
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/modules-list/modules-list.module').then( m => m.ModulesListPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'modules-list',
@@ -71,12 +71,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/uploader/uploader.module').then( m => m.UploaderPageModule), canActivate:[AuthService]
   },
   {
-    path: 'feed',
-    loadChildren: () => import('./pages/feed/feed.module').then( m => m.FeedPageModule)
+    path: 'log-post/:id',
+    loadChildren: () => import('./pages/log-post/log-post.module').then( m => m.LogPostPageModule), canActivate:[AuthService]
   },
   {
-    path: 'log-post/:id',
-    loadChildren: () => import('./pages/log-post/log-post.module').then( m => m.LogPostPageModule)
+    path: 'profile-page',
+    loadChildren: () => import('./pages/profile-page/profile-page.module').then( m => m.ProfilePagePageModule), canActivate:[AuthService]
+  },
+  {
+    path: 'edit-profile',
+    loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule), canActivate:[AuthService]
   }
 ];
 

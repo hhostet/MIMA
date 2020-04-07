@@ -24,3 +24,19 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* adding Benton Sans font */
+@font-face{
+    font-family: 'Benton Sans Regular';
+    src: url('./assets/fonts/BentonSans-Regular.otf');
+}
+
+/* adding Georgia Pro font */
+@font-face{
+    font-family: 'Georgia Pro';
+    src: url('./assets/fonts/GeorgiaPro-Regular.ttf');
+}
+
+.font{
+    font-family: 'Georgia Pro';
+}

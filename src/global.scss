@@ -40,3 +40,27 @@
 .font{
     font-family: 'Georgia Pro';
 }
+
+.blue-border{
+    border-top:solid 3px #006298;
+}
+
+table, tr, th, td{
+    border:solid 1px black;
+}
+
+th, td{
+    padding:10px;
+}
+
+.special{
+    padding:20px;
+}
+
+.no-padding{
+    padding:0;
+}
+
+.some-padding{
+    padding:5px;
+}

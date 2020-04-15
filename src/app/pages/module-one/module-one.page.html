@@ -10,91 +10,108 @@
   <ion-content class="ion-padding">
     <div class="ion-text-wrap">
       <h2 class="ion-text-center"><b>The Science of Attention, Focus, and Concentration</b></h2>
-      <h3><b>1.1 Key to Performance: Focus and Attention</b></h3>
-      <ul>
-        <li>
-          <p>Focus is a central key to performance excellence.</p>
-        </li>
-        
-        <li>
-          <p>Success in any endeavor is dependent on:</p>
-          <ol>
-            <li>Identifying the elements essential for success;</li>
-            <li>Maintaining attention on the essential elements; and</li>
-            <li>Ignoring the distractions</li>
-          </ol>
-        </li>
-  
-        <li>
-          <p>
-            In the stimulus rich environment of the O.R. attentional selectivity is critical because our attention capacity or working memory is limited.
-          </p>
-        </li>
-  
-        <li>
-          <p>
-            Working memory is a cognitive system that temporarily stores information so that it can be accessed quickly, integrated with other information, or otherwise manipulated.
-          </p>
-        </li>
-  
-        <li>
-          <p>
-            Working memory can aid one’s ability to focus on task-relevant information and ignore distractions.
-          </p>
-        </li>
-  
-        <hr class="blue-border" />
-          <p style="color:#006298">
-            <i>
-              <b>Reflection:</b> What are some situations in surgery that can overload your working memory?
-            </i>
-          </p>
-        <hr class="blue-border"/>
-
-        <li>
-          <p>Cognitive overload may negatively influence performance in a number of ways:</p>
-          <ol>
-            <li>Increased distractibility and decreased sensitivityto relevant information;</li>
-            <li>Ability to process information is slowed, increasing our decision making rate;</li>
-            <li>Capacity for verbal information is significantly decreased; and</li>
-            <li>Limited amount of new information is stored in long-term memory.</li>
-          </ol>
-        </li>
-  
-        <hr class="blue-border" />
-          <p style="color:#006298">
-            <i>
-              <b>Reflection: </b> Select a specific performance situation and identify the essential elements for success, and the most common nonessential distractions that you are likely to encounter. Feel free to consider any performance situation, or a specific phase or task within a complex procedure.
-            </i>
-          </p>
+      <a href="https://www.youtube.com/watch?v=yS2wT9SuafU&feature=youtu.be">Module 1 Video</a>
+<!--SECTION 1.0-->
+    <ion-button fill="outline" expand="block"(click)="hide1()"><b>1.1 Key to Performance</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+    </ion-button>
+    <div *ngIf="hideMe1">
+        <h3><b>1.1 Key to Performance: Focus and Attention</b></h3>
+        <ul>
+          <li>
+            <p>Focus is a central key to performance excellence.</p>
+          </li>
+          
+          <li>
+            <p>Success in any endeavor is dependent on:</p>
+            <ol>
+              <li>Identifying the elements essential for success;</li>
+              <li>Maintaining attention on the essential elements; and</li>
+              <li>Ignoring the distractions</li>
+            </ol>
+          </li>
+    
+          <li>
+            <p>
+              In the stimulus rich environment of the O.R. attentional selectivity is critical because our attention capacity or working memory is limited.
+            </p>
+          </li>
+    
+          <li>
+            <p>
+              Working memory is a cognitive system that temporarily stores information so that it can be accessed quickly, integrated with other information, or otherwise manipulated.
+            </p>
+          </li>
+    
+          <li>
+            <p>
+              Working memory can aid one’s ability to focus on task-relevant information and ignore distractions.
+            </p>
+          </li>
+    
           <hr class="blue-border" />
-      </ul>
+            <p style="color:#006298">
+              <i>
+                <b>Reflection:</b> What are some situations in surgery that can overload your working memory?
+              </i>
+            </p>
+          <hr class="blue-border"/>
   
-      <h3><b>1.2 What's So Hard about Focus and Attention?</b></h3>
-  
-      <ul>
-        <li>
-          <p>
-            Different tasks require different focus. Optimal performance requires knowing <b>where to focus</b>, <b>when to shift focus</b>, and <b>how to shift focus and maintain attention</b>. This becomes particularly challenging when emotions become intense.
-          </p>
-        </li>
-      </ul>
-  
-      <h3><b>1.3 Understanding Focus and Attention</b></h3>
-      <ul>
-        <li>
-          <p>
-            The key is to make certain that your attention is on what optimizes your performance for the task at hand.
-          </p>
-        </li>
-  
-        <li>
-          <p>
-            Attention has two dimensions: it has direction – either inward (to yourself) or outward (to your environment); and width – where attention can be either narrow or broad. Different tasks require different focus of attention.
-          </p>
-        </li>
-      </ul>
-  
+          <li>
+            <p>Cognitive overload may negatively influence performance in a number of ways:</p>
+            <ol>
+              <li>Increased distractibility and decreased sensitivityto relevant information;</li>
+              <li>Ability to process information is slowed, increasing our decision making rate;</li>
+              <li>Capacity for verbal information is significantly decreased; and</li>
+              <li>Limited amount of new information is stored in long-term memory.</li>
+            </ol>
+          </li>
+    
+          <hr class="blue-border" />
+            <p style="color:#006298">
+              <i>
+                <b>Reflection: </b> Select a specific performance situation and identify the essential elements for success, and the most common nonessential distractions that you are likely to encounter. Feel free to consider any performance situation, or a specific phase or task within a complex procedure.
+              </i>
+            </p>
+            <hr class="blue-border" />
+        </ul>
+    </div>
+
+<!--SECTION 1.2-->
+    <ion-button fill="outline" expand="block"(click)="hide2()"><b>1.2 What's So Hard</b>
+      <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+    </ion-button>
+    <div *ngIf="hideMe2">
+        <h3><b>1.2 What's So Hard about Focus and Attention?</b></h3>
+        <ul>
+          <li>
+            <p>
+              Different tasks require different focus. Optimal performance requires knowing <b>where to focus</b>, <b>when to shift focus</b>, and <b>how to shift focus and maintain attention</b>. This becomes particularly challenging when emotions become intense.
+            </p>
+          </li>
+        </ul>
+    </div>
+
+<!--SECTION 1.3-->
+    <ion-button fill="outline" expand="block"(click)="hide3()"><b>1.3 Understanding</b>
+      <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+    </ion-button>
+    <div *ngIf="hideMe3">
+        <h3><b>1.3 Understanding Focus and Attention</b></h3>
+        <ul>
+          <li>
+            <p>
+              The key is to make certain that your attention is on what optimizes your performance for the task at hand.
+            </p>
+          </li>
+    
+          <li>
+            <p>
+              Attention has two dimensions: it has direction – either inward (to yourself) or outward (to your environment); and width – where attention can be either narrow or broad. Different tasks require different focus of attention.
+            </p>
+          </li>
+        </ul>
+          
       <img src="../../../assets/module_pictures/1.3-1.png" />
       <img src="../../../assets/module_pictures/1.3-2.png" />
 
@@ -129,174 +146,189 @@
           <p>Rapidly shifting focus between different narrow/broad and internal/external elements is critical to perform complex tasks – such as those a surgeon is required to routinely perform in a modern OR.</p>
         </li>
       </ul>
-  
-      <h4><b>Exercise: Rabbit Duck</b></h4>
-  
-      <img src="../../../assets/module_pictures/1.3-3.png" />
-      <br/>
-      <ul>
-        <li>
-          <p>Pay attention to where you pay attention. If you focus your attention below the bill, you see a duck. If you focus your attention on the paws, you see a rabbit. Knowing where attention is needed for any given task is an important mental skill.</p>
-        </li>
-      </ul>
-  
-      <h3><b>1.4 Neurology of Attention and Focus</b></h3>
-      <ul>
-        <li>
-          <p>
-            Over-reliance upon thinking is one of the most common hindrances to performance, when fluid, fine motor skills are required.
-          </p>
-        </li>
-  
-        <hr class="blue-border" />
-          <p style="color:#006298">
-            <i>
-              <b>Reflection:</b> Consider any fluid, fine motor skill you have used outside of surgery (e.g., playing the piano, dribbling a soccer ball, driving a car) or currently use during a surgical procedure or task that has become a routine or automatic behavior for you. What would happen to your performance if you thought about every detail required to perform this skill?
-            </i>
-          </p>
-        <hr class="blue-border" />
+    </div> 
 
-        <li>
-          <p>
-            The prefrontal cortex or the thinking part of the brain (“upper brain”) is the center of executive functions, and is essential for intentional learning.
-          </p>
-        </li>
+<!--EXCERCISE-->
+    <ion-button fill="outline" expand="block"(click)="hide4()"><b>Exercise: Rabbit Duck</b>
+      <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+    </ion-button>
+    <div *ngIf="hideMe4">
+        <h4><b>Exercise: Rabbit Duck</b></h4>
   
-        <li>
-          <p>
-            Subcortical areas (including the basal ganglia and the amygdala) (“lower brain”) are always on and respond to stimuli automatically and involuntarily. This part of the brain recognizes patterns and associations, and executes habitual routines and actions.
-          </p>
-        </li>
-  
-        <li>
-          <p>
-            “Top down” neurology is critical to manage the impulsive reactions of the lower brain, and exercising logical decisions at specific points in a procedure.
-          </p>
-        </li>
-  
-        <li>
-          <p>
-            “Bottom up” neurology is essential for rapid execution of fine motor tasks, pattern recognition, and managing attention and energy for long periods of sustained performance.
-          </p>
-        </li>
-      </ul>
-      
-      <img src="../../../assets/module_pictures/1.4-1.png" />
-      <br/><br/>
-  
-      <table>
-        <tr>
-          <th></th>
-          <th>"Top Down"</th>
-          <th>"Bottom Up"</th>
-        </tr>
-  
-        <tr>
-          <th class="some-padding">Areas of the brain</th>
-          <td class="some-padding">Pre-frontal cortex</td>
-          <td class="some-padding">Subcortical areas, including basal ganglia and amygdala</td>
-        </tr>
-  
-        <tr>
-          <th class="no-padding">Strengths</th>
-          <td class="no-padding">
-            <ul class="special">
-              <li>
-                <p>Center of executive function</p>
-              </li>
-  
-              <li>
-                <p>Essential to master new skills and techniques</p>
-              </li>
-  
-              <li>
-                <p>Makes cognitive decisions</p>
-              </li>
-  
-              <li>
-                <p>Mindfully shifts attention</p>
-              </li>
-  
-              <li>
-                <p>Overrides automatic responses to stress or fear</p>
-              </li>
-            </ul>
-          </td>
-  
-          <td class="no-padding">
-            <ul class="special">
-              <li>
-                <p>Neurologically fast</p>
-              </li>
-  
-              <li>
-                <p>Recognizes patterns and associations, "intuitive"</p>
-              </li>
-  
-              <li>
-                <p>Rapid execution of fine-motor tasks</p>
-              </li>
-  
-              <li>
-                <p>Always on, automatic and involuntary</p>
-              </li>
-  
-              <li>
-                <p>Requires less energy than top down brain</p>
-              </li>
-  
-              <li>
-                <p>Highly responsive to emotions</p>
-              </li>
-            </ul>
-          </td>
-        </tr>
-  
-        <tr>
-          <th class="no-padding">Weaknesses</th>
-          <td class="no-padding">
-            <ul class="special">
-              <li>
-                <p>Neurologically slow</p>
-              </li>
-  
-              <li>
-                <p>Requires a high level of energy and is easily fatigued</p>
-              </li>
-  
-              <li>
-                <p>Cannot actually execute fluid, complex actions</p>
-              </li>
-            </ul>
-          </td>
-  
-          <td class="no-padding">
-            <ul class="special">
-              <li>
-                <p>Highly responsive to emotions</p>
-              </li>
-  
-              <li>
-                <p>Can be emotionally hijacked by the amygdala</p>
-                <ul>
-                  <li>
-                    <p>Restricts attention</p>
-                  </li>
-  
-                  <li>Can trigger impulsive behavior</li>
-                </ul>
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-  
-      <ul>
-        <li>
-          <p>
-            Modifying top-down processes usually involves the internal dialogue or “self-talk” that we call thinking. The inner brain and bottom-up processes are modified through images, rhythms, emotions and sensations that are experiential in nature.
-          </p>
-        </li>
-      </ul>
+        <img src="../../../assets/module_pictures/1.3-3.png" />
+        <br/>
+        <ul>
+          <li>
+            <p>Pay attention to where you pay attention. If you focus your attention below the bill, you see a duck. If you focus your attention on the paws, you see a rabbit. Knowing where attention is needed for any given task is an important mental skill.</p>
+          </li>
+        </ul>
     </div>
-  </ion-content>
+
+<!--SECTION 1.4-->
+<ion-button fill="outline" expand="block"(click)="hide5()"><b>1.4 Neurology</b>
+  <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+</ion-button>
+<div *ngIf="hideMe5">  
+    <h3><b>1.4 Neurology of Attention and Focus</b></h3>
+    <ul>
+      <li>
+        <p>
+          Over-reliance upon thinking is one of the most common hindrances to performance, when fluid, fine motor skills are required.
+        </p>
+      </li>
+
+      <hr class="blue-border" />
+        <p style="color:#006298">
+          <i>
+            <b>Reflection:</b> Consider any fluid, fine motor skill you have used outside of surgery (e.g., playing the piano, dribbling a soccer ball, driving a car) or currently use during a surgical procedure or task that has become a routine or automatic behavior for you. What would happen to your performance if you thought about every detail required to perform this skill?
+          </i>
+        </p>
+      <hr class="blue-border" />
+
+      <li>
+        <p>
+          The prefrontal cortex or the thinking part of the brain (“upper brain”) is the center of executive functions, and is essential for intentional learning.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Subcortical areas (including the basal ganglia and the amygdala) (“lower brain”) are always on and respond to stimuli automatically and involuntarily. This part of the brain recognizes patterns and associations, and executes habitual routines and actions.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          “Top down” neurology is critical to manage the impulsive reactions of the lower brain, and exercising logical decisions at specific points in a procedure.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          “Bottom up” neurology is essential for rapid execution of fine motor tasks, pattern recognition, and managing attention and energy for long periods of sustained performance.
+        </p>
+      </li>
+    </ul>
+    
+    <img src="../../../assets/module_pictures/1.4-1.png" />
+    <br/><br/>
+
+    <table>
+      <tr>
+        <th></th>
+        <th>"Top Down"</th>
+        <th>"Bottom Up"</th>
+      </tr>
+
+      <tr>
+        <th class="some-padding">Areas of the brain</th>
+        <td class="some-padding">Pre-frontal cortex</td>
+        <td class="some-padding">Subcortical areas, including basal ganglia and amygdala</td>
+      </tr>
+
+      <tr>
+        <th class="no-padding">Strengths</th>
+        <td class="no-padding">
+          <ul class="special">
+            <li>
+              <p>Center of executive function</p>
+            </li>
+
+            <li>
+              <p>Essential to master new skills and techniques</p>
+            </li>
+
+            <li>
+              <p>Makes cognitive decisions</p>
+            </li>
+
+            <li>
+              <p>Mindfully shifts attention</p>
+            </li>
+
+            <li>
+              <p>Overrides automatic responses to stress or fear</p>
+            </li>
+          </ul>
+        </td>
+
+        <td class="no-padding">
+          <ul class="special">
+            <li>
+              <p>Neurologically fast</p>
+            </li>
+
+            <li>
+              <p>Recognizes patterns and associations, "intuitive"</p>
+            </li>
+
+            <li>
+              <p>Rapid execution of fine-motor tasks</p>
+            </li>
+
+            <li>
+              <p>Always on, automatic and involuntary</p>
+            </li>
+
+            <li>
+              <p>Requires less energy than top down brain</p>
+            </li>
+
+            <li>
+              <p>Highly responsive to emotions</p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th class="no-padding">Weaknesses</th>
+        <td class="no-padding">
+          <ul class="special">
+            <li>
+              <p>Neurologically slow</p>
+            </li>
+
+            <li>
+              <p>Requires a high level of energy and is easily fatigued</p>
+            </li>
+
+            <li>
+              <p>Cannot actually execute fluid, complex actions</p>
+            </li>
+          </ul>
+        </td>
+
+        <td class="no-padding">
+          <ul class="special">
+            <li>
+              <p>Highly responsive to emotions</p>
+            </li>
+
+            <li>
+              <p>Can be emotionally hijacked by the amygdala</p>
+              <ul>
+                <li>
+                  <p>Restricts attention</p>
+                </li>
+
+                <li>Can trigger impulsive behavior</li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <ul>
+      <li>
+        <p>
+          Modifying top-down processes usually involves the internal dialogue or “self-talk” that we call thinking. The inner brain and bottom-up processes are modified through images, rhythms, emotions and sensations that are experiential in nature.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+</div>   
+</ion-content> 
+     

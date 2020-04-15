@@ -7,91 +7,102 @@
     </ion-toolbar>
   </ion-header>
   
+
+
   <ion-content class="ion-padding">
       <div class="ion-text-wrap">
         <h2 class="ion-text-center">Action Plans (Goal Setting)</h2>
-        <h3>2.1 Introduction</h3>
-        
-        <ul>
-          <li>
-            <p>Your action plan is your guide for what you want to focus your attention on at any given
-              point in time or circumstance while performing. Focus is a process that involves an
-              <i>individual</i> performing a task, <i>attention</i> and a <i>target</i>. For optimal performance, your target will always be what you ideally want to <i>achieve</i>, rather than what you want to avoid.</p>
-          </li>
-        </ul>
-  
-        <!--picture of soccer goes here-->
-  
-        <ul>
-          <li>
-            <p>Clear, effective goals impact both focus and effort. They serve as guides in making choices during performance, and provide feedback as to progress and performance.</p>
-          </li>
-        </ul>
-  
-        <h3>2.2 Choosing Effective Goals</h3>
-  
-        <ul>
-          <li>
-            <p>There are 3 types of goals: outcome goals, performance goals and process goals.</p>
-  
-            <ul>
-              <li>
-                <p>Outcome goals tend to be future oriented; they direct energy and effort towards
-                  something that a person aspires to achieve.</p>
-              </li>
-  
-              <li>
-                <p>While outcome goals can be beneficial for long-term planning, they are not
-                  particularly helpful for your action plan.</p>
-              </li>
-  
-              <li>
-                <p>Outcome goals are not necessarily valid feedback upon which to base one’s
-                  confidence, since outcomes are always contingent upon a variety of factors (many of
-                  which are beyond one’s control).</p>
-              </li>
-  
-              <li>
-                <p>Performance goals compare one’s performance against a standard.</p>
-              </li>
-  
-              <li>
-                <p>This is an improvement over outcome goals; however, it is still not necessarily a valid reflection of ability, since performance goals are typically set based upon ideal conditions. If conditions are less than ideal, then those goals are unrealistic.</p>
-              </li>
-  
-              <li>
-                <p>
-                  <i>
-                    <b>Reflection: </b> What are some factors that may influence the time it takes to complete a laparoscopic cholecystectomy or tubal ligation?
-                  </i>
-                </p>
-              </li>
-  
-              <li>
-                <p>The most effective goals for an Action Plan and upon which to base your confidence
-                  are process goals. Process goals focus on those small actions that are under one’s
-                  control during the moment of performance that are the building blocks for success.</p>
-              </li>
-  
-              <li>
-                <p>If one successfully achieves his or her process goals, they will have the best possible performance under whatever conditions are available, and have the best possible outcome upon completion of the performance.</p>
-              </li>
-  
-              <li>
-                <p>The most effective process goals are <b>SMART</b> goals. They are:</p>
-  
-                <ul>
-                  <li><b>S</b>pecific,</li>
-                  <li><b>M</b>easurable,</li>
-                  <li><b>A</b>ction oriented,</li>
-                  <li><b>R</b>easonable, and</li>
-                  <li><b>T</b>ime oriented.</li>
+
+        <ion-list>  
+          <ion-button expand="full" (click)="hide1()">2.1 Introduction 
+              <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+          </ion-button>
+          <div *ngIf="hideMe1">
+              <ul>
+                  <li>
+                    <p>Your action plan is your guide for what you want to focus your attention on at any given
+                      point in time or circumstance while performing. Focus is a process that involves an
+                      <i>individual</i> performing a task, <i>attention</i> and a <i>target</i>. For optimal performance, your target will always be what you ideally want to <i>achieve</i>, rather than what you want to avoid.</p>
+                  </li>
                 </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-  
+          
+                <!--picture of soccer goes here-->
+          
+                <ul>
+                  <li>
+                    <p>Clear, effective goals impact both focus and effort. They serve as guides in making choices during performance, and provide feedback as to progress and performance.</p>
+                  </li>
+                </ul>
+          </div>
+          
+          <ion-button expand="full" (click)="hide2()">2.2 Choosing Effective Goals
+              <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+          </ion-button>
+          <div *ngIf="hideMe2">
+              <ul>
+                  <li>
+                    <p>There are 3 types of goals: outcome goals, performance goals and process goals.</p>
+          
+                    <ul>
+                      <li>
+                        <p>Outcome goals tend to be future oriented; they direct energy and effort towards
+                          something that a person aspires to achieve.</p>
+                      </li>
+          
+                      <li>
+                        <p>While outcome goals can be beneficial for long-term planning, they are not
+                          particularly helpful for your action plan.</p>
+                      </li>
+          
+                      <li>
+                        <p>Outcome goals are not necessarily valid feedback upon which to base one’s
+                          confidence, since outcomes are always contingent upon a variety of factors (many of
+                          which are beyond one’s control).</p>
+                      </li>
+          
+                      <li>
+                        <p>Performance goals compare one’s performance against a standard.</p>
+                      </li>
+          
+                      <li>
+                        <p>This is an improvement over outcome goals; however, it is still not necessarily a valid reflection of ability, since performance goals are typically set based upon ideal conditions. If conditions are less than ideal, then those goals are unrealistic.</p>
+                      </li>
+          
+                      <li>
+                        <p>
+                          <i>
+                            <b>Reflection: </b> What are some factors that may influence the time it takes to complete a laparoscopic cholecystectomy or tubal ligation?
+                          </i>
+                        </p>
+                      </li>
+          
+                      <li>
+                        <p>The most effective goals for an Action Plan and upon which to base your confidence
+                          are process goals. Process goals focus on those small actions that are under one’s
+                          control during the moment of performance that are the building blocks for success.</p>
+                      </li>
+          
+                      <li>
+                        <p>If one successfully achieves his or her process goals, they will have the best possible performance under whatever conditions are available, and have the best possible outcome upon completion of the performance.</p>
+                      </li>
+          
+                      <li>
+                        <p>The most effective process goals are <b>SMART</b> goals. They are:</p>
+          
+                        <ul>
+                          <li><b>S</b>pecific,</li>
+                          <li><b>M</b>easurable,</li>
+                          <li><b>A</b>ction oriented,</li>
+                          <li><b>R</b>easonable, and</li>
+                          <li><b>T</b>ime oriented.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+          </div>
+      </ion-list>
+      
         <h3>2.3 ACTION PLAN Comprised of Process Goals</h3>
   
         <ul>

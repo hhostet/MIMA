@@ -1,7 +1,12 @@
+import { auth } from 'firebase/app';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-profile-page',
@@ -15,11 +20,14 @@ export class ProfilePagePage implements OnInit {
   username: string
   profilePic: string
   posts
+  uid
 
   constructor(
     private afs: AngularFirestore,
     private user: UserService,
-    private router: Router
+    private router: Router,
+    private auth: AuthService,
+    public afAuth: AngularFireAuth
   ) {
     this.mainuser  = afs.doc(`users/${user.getUID()}`)
     this.userPosts = this.mainuser.valueChanges().subscribe(event=>{
@@ -37,6 +45,13 @@ export class ProfilePagePage implements OnInit {
    goTo(postID: string){
      this.router.navigate(['/log-post/' + postID])
    }
+
+   logout() {
+    return this.afAuth.auth.signOut().then(() => this.router.navigate(['/login']))
+    console.log(this.mainuser);
+  }
+
+
   ngOnInit() {
   }
 

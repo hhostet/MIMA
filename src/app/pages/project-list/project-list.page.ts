@@ -1,4 +1,4 @@
-import { Project, ProjectServiceService } from './../../services/project-service.service';
+// import { Project, ProjectServiceService } from './../../services/project-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -9,11 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class ProjectListPage implements OnInit {
 
-  private projects: Observable<Project[]>;
-  constructor(private ps: ProjectServiceService) { }
+  // private projects: Observable<Project[]>;
+  constructor(/* private ps: ProjectServiceService */) { }
 
   ngOnInit() {
 
-    this.projects = this.ps.getProjects();
+    // this.projects = this.ps.getPosts();
   }
 }

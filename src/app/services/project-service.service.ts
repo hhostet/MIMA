@@ -3,26 +3,28 @@ import { Observable } from 'rxjs';
 import { AngularFirestoreCollection, AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import {map, take} from 'rxjs/operators';
 
-export interface Project {
-  id?: string; 
-  skill_used: string; 
-  description: string;
+export interface Post {
+  author: string; 
+  date: Date;
+  desc: string;
   effect: string;
-  time: string;
-  date: string;
-  location: string;
+  skillUsed: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectServiceService {
-  private projects: Observable<Project[]>;
-  private projectCollection:AngularFirestoreCollection<Project>;
+  private posts: Observable<Post[]>;
+  private postCollection:AngularFirestoreCollection<Post>;
 
   constructor(private afs:AngularFirestore) {
-    this.projectCollection = this.afs.collection<Project>("projects");
-    this.projects = this.projectCollection.snapshotChanges().pipe(
+
+    this.postCollection = this.afs.collection<Post>('posts');
+    this.posts = this.postCollection.valueChanges();
+    
+/*     this.postCollection = this.afs.collection<Post>("posts");
+    this.posts = this.postCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a=> {
           //gets what inside a doc
@@ -32,23 +34,23 @@ export class ProjectServiceService {
           return {id, ...data};
         });
       })
-    );
+    ); */
    }
 
-   getProjects():Observable<Project[]> {
-     return this.projects;
+   getPosts():Observable<Post[]> {
+     return this.posts;
    }
 
-   getProject(id: string):Observable<Project> {
-     return this.projectCollection.doc<Project>(id).valueChanges().pipe(
+/*    getProject(id: string):Observable<Post> {
+     return this.postCollection.doc<Post>(id).valueChanges().pipe(
        take(1),
        map(project => {
-         project.id = id;
+         project.date = date;
          return project;
        })
       )
-   }
-
+   } */
+/* 
    addProject(project: Project): Promise<DocumentReference> {
      return this.projectCollection.add(project);
    }
@@ -61,5 +63,5 @@ export class ProjectServiceService {
 
    deleteProject(id:string):Promise<void> {
      return this.projectCollection.doc(id).delete();
-   }
+   } */
 }

@@ -81,6 +81,14 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule), canActivate:[AuthService]
+  },
+  {
+    path: 'admin-home',
+    loadChildren: () => import('./pages/admin-home/admin-home.module').then( m => m.AdminHomePageModule)
+  },
+  {
+    path: 'admin-log-page',
+    loadChildren: () => import('./pages/admin-log-page/admin-log-page.module').then( m => m.AdminLogPagePageModule)
   }
 ];
 

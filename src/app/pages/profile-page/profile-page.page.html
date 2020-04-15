@@ -5,15 +5,17 @@
 </ion-header>
 
 <ion-content>
+    
   <div id="profile-info" *ngIf="username">
       <ion-grid>
         <ion-row>
           <ion-col size="4" class="user-image">
-              <ion-icon size="large" name="contact"></ion-icon>
+              <ion-icon style="font-size: 94px;" name="contact"></ion-icon>
           </ion-col>
           <ion-col size="8">
             <p>{{ username }}</p>
             <!-- <ion-button shape="round" color="primary" routerLink="/edit-profile">Edit Profile</ion-button> -->
+            <ion-button fill="solid" expand="block" (click)="logout()">Logout</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>

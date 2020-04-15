@@ -39,7 +39,9 @@ password:  string = ""
         })
         this.router.navigateByUrl('/modules-list');
       }
-
+      if(res.user.uid === "wDbTnD4ecfM11QPvfu5Eavi5ofB3" ){
+        this.router.navigateByUrl('/admin-home');
+      }
       console.dir("successful login")
     } catch(err) {
 			console.dir(err)

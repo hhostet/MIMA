@@ -5,6 +5,8 @@ import { UserService } from '../../services/user.service';
 import { firestore } from 'firebase';
 import { ToastController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-module-two',
@@ -15,16 +17,26 @@ export class ModuleTwoPage implements OnInit {
 
   exOne: string;
   date: "";
-
+  hideMe1: boolean = false;
+  hideMe2: boolean = false;
   constructor(
     public afstore: AngularFirestore,
     public user: UserService,
     private router: Router,
     private toastCtrl: ToastController,
     private activatedRoute:ActivatedRoute,
+    public modalController: ModalController
   ) { }
 
   ngOnInit() {
+  }
+
+  hide1() {
+    this.hideMe1 = !this.hideMe1;
+  }
+
+  hide2() {
+    this.hideMe2 = !this.hideMe2;
   }
 
   submitEx() {

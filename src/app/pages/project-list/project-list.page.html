@@ -16,7 +16,7 @@
     </ion-fab-button>
   </ion-fab> -->
 
-  <ion-card *ngFor="let project of (projects | async)" routerLink="/project-details/{{project.id}}" color="light-tint">
+  <ion-card *ngFor="let project of projects" routerLink="/project-details/{{project.id}}" color="light-tint">
     <ion-card-header>
         <ion-card-subtitle >
             <ion-icon name="calendar" style="font-size: 1.5em;"></ion-icon>

@@ -3,11 +3,10 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Injectable } from '@angular/core'
 import {Router, CanActivate} from '@angular/router'
 
-
 @Injectable()
 export class AuthService implements CanActivate{
-
-    constructor(private router: Router, private user: UserService) {
+    private currentUser: firebase.User = null;
+    constructor(private router: Router, private user: UserService, private afAuth: AngularFireAuth) {
 
     }
     
@@ -19,4 +18,15 @@ export class AuthService implements CanActivate{
         return false
     }
 
+    logout(){
+        this.afAuth.auth.signOut();
+     }
+
+     isLoggedIn() {
+        if (this.currentUser == null) {
+          return false;
+        }
+        return true;
+      }
 }
+

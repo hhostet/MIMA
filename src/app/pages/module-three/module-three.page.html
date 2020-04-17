@@ -9,9 +9,15 @@
   
   <ion-content class="ion-padding">
       <div class="ion-text-wrap">
-        <h2 class="ion-text-center"><b>Energy Management</b></h2>
-        <h3><b>3.1 Negative Impact of Adrenaline</b></h3>
+          <h2 class="ion-text-center"><b>Energy Management</b></h2>
 
+          <!--SECTION 3.1-->
+        <ion-button fill="outline" expand="block"(click)="hide1()"><b>3.1 Negative Impact of Adrenaline</b>
+            <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+        </ion-button>
+        <div *ngIf="hideMe1">
+        
+        <h3><b>3.1 Negative Impact of Adrenaline</b></h3>
         <ul>
           <li>
             <p>
@@ -57,7 +63,13 @@
               </p>
             </li>
         </ul>
+      </div>
 
+      <!--SECTION 3.2-->
+    <ion-button fill="outline" expand="block"(click)="hide2()"><b>3.2 Emotional Regulation</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+    </ion-button>
+    <div *ngIf="hideMe2">
         <h3><b>3.2 Emotional Regulation</b></h3>
 
         <ul>
@@ -79,7 +91,13 @@
             </p>
           </li>
         </ul>
+      </div>
 
+      <!--SECTION 3.3-->
+    <ion-button fill="outline" expand="block"(click)="hide3()"><b>3.3 Centering</b>
+      <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+    </ion-button>
+    <div *ngIf="hideMe3">
         <h3><b>3.3 Centering with Rapid Relaxation</b></h3>
 
         <ul>
@@ -246,9 +264,14 @@
             </ul>
           </li>
         </ul>
-        
+      </div>
+      
+      <!--SECTION 3.4-->
+      <ion-button fill="outline" expand="block"(click)="hide4()"><b>3.4 Tips for Centering</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe4">
         <h3><b>3.4 Tips for Centering</b></h3>
-
         <ul>
           <li>
             <p>
@@ -280,7 +303,13 @@
             </p>
           </li>
         </ul>
+      </div>
 
+      <!--section 3.5-->
+      <ion-button fill="outline" expand="block"(click)="hide5()"><b>3.5 Tips for Raising Energy Levels</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe5">
         <h3><b>3.5 Tips for Raising Energy Levels</b></h3>
 
         <ul>
@@ -296,9 +325,7 @@
             </p>
           </li>
         </ul>
-
       </div>
-  
-  
-  </ion-content>
+
+
   

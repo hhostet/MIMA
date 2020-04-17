@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { async } from '@angular/core/testing';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore,  AngularFirestoreDocument } from '@angular/fire/firestore';
 import { UserService } from '../../services/user.service';
 import { firestore } from 'firebase';
 import { ToastController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { timestamp } from 'rxjs/operators';
+import { AuthService } from './../../services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 
 @Component({
@@ -14,19 +17,51 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./module-two.page.scss'],
 })
 export class ModuleTwoPage implements OnInit {
+  userPosts
+  mainuser: AngularFirestoreDocument
+  sub
+  username: string
+  profilePic: string
+  posts
+  uid
 
-  exOne: string;
-  date: "";
+  exTwo_Zero: string;
+  exTwo_One: string;
+  exTwo_Two: string;
+  exTwo_Three: string;
+  exTwo_Four: string;
+  exTwo_Five: string;
+  exTwo_Six: string;
+  exTwo_Seven: string;
+  exTwo_Eight: string;
+  exTwo_Nine: string;
+  exTwo_Ten: string;
+
+  exTwo_Positive: string;
+  exTwo_Negative: string;
+
   hideMe1: boolean = false;
   hideMe2: boolean = false;
+  hideMe3: boolean = false;
+  hideMe4: boolean = false;
+  hideMe5: boolean = false;
+  hideMe6: boolean = false;
+  hideMe7: boolean = false;
+
+  timeStamp: Date;
+
   constructor(
     public afstore: AngularFirestore,
     public user: UserService,
     private router: Router,
     private toastCtrl: ToastController,
     private activatedRoute:ActivatedRoute,
-    public modalController: ModalController
-  ) { }
+    public modalController: ModalController,
+    private auth: AuthService,
+    public afAuth: AngularFireAuth
+  ) { 
+
+  }
 
   ngOnInit() {
   }
@@ -39,32 +74,148 @@ export class ModuleTwoPage implements OnInit {
     this.hideMe2 = !this.hideMe2;
   }
 
+  hide3() {
+    this.hideMe3 = !this.hideMe3;
+  }
+
+  hide4() {
+    this.hideMe4 = !this.hideMe4;
+  }
+
+  hide5() {
+    this.hideMe5 = !this.hideMe5;
+  }
+
+  hide6() {
+    this.hideMe6 = !this.hideMe6;
+  }
+
+  hide7() {
+    this.hideMe7 = !this.hideMe7;
+  }
+
   submitEx() {
-    const exOne = this.exOne
-    const date = this.date
-    const id = firestore.FieldValue.serverTimestamp()
+    try{
+      const exTwo_Zero = this.exTwo_Zero
+      const exTwo_One= this.exTwo_One
+      const exTwo_Two= this.exTwo_Two
+      const exTwo_Three = this.exTwo_Three
+      const exTwo_Four = this.exTwo_Four
+      const exTwo_Five = this.exTwo_Five
+      const exTwo_Six = this.exTwo_Six
+      const exTwo_Seven= this.exTwo_Seven
+      const exTwo_Eight = this.exTwo_Eight
+      const exTwo_Nine= this.exTwo_Nine
+      const exTwo_Ten = this.exTwo_Ten
+      const exTwo_Positive= this.exTwo_Positive
+      const exTwo_Negative= this.exTwo_Negative
 
-    console.log("clicked")
+      const timeStamp = firestore.FieldValue.serverTimestamp()
+          //const id = this.afstore.ref().child('exercises').push.key;
+      console.log("clicked")
 
-    this.afstore.doc(`users/${this.user.getUID()}`).update({
-      module02_timestamp: id 
-    })
+      this.afstore.doc(`users/${this.user.getUID()}`).update({
+        module02_timestamp: timeStamp
+      })
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).set({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise 2.4: ${exTwo_Zero}`),
+        author: this.user.getUsername(),
+      }) 
     
-     this.afstore.doc(`exercises/${this.user.getUID()}`).set({
-      module02: firestore.FieldValue.arrayUnion(`Exercise One: ${exOne}`),
-      author: this.user.getUsername(),
-      
-      
-		}) 
-  
-    this.showToast("This exercise has been submitted!");
-    
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise One: ${exTwo_One}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Two:  ${exTwo_Two}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Three: ${exTwo_Three}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Four: ${exTwo_Four}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Five: ${exTwo_Five} `),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Six: ${exTwo_Six}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Seven: ${exTwo_Seven}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Eight: ${exTwo_Eight}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Nine: ${exTwo_Nine}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Exercise Ten: ${exTwo_Ten}`),
+      }) 
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Positive Emotions: ${exTwo_Positive}`),
+      })
+
+      this.afstore.doc(`exercises/${this.user.getUID()}`).update({
+        module02: firestore.FieldValue.arrayUnion(
+          `Negative Emotions: ${exTwo_Negative}`),
+      })
+
+/*       [Exercise One: ${exTwo_One}]
+       |
+       |
+       |
+      |
+      |
+       |
+       |
+      Exercise Nine: ${exTwo_Nine} |
+       |
+       |
+       */
+      this.showToast("This exercise has been submitted!");
+
+    } catch (err) {
+      console.dir(err)
+        if(err.message === "Cannot read property 'uid' of undefined") {
+          console.dir("Error")
+          this.showToast("Please login to submit this exercise.");
+          this.router.navigateByUrl('/login');
+        }
+        else {
+          console.dir("Error")
+          this.showToast("Sorry, there was an error processing this request.");
+        } 
+      } 
   }
 
   showToast(message) {
     this.toastCtrl.create({
       message:message,
-      duration: 5000
+      duration: 3000
     }).then(toast => toast.present());
   }
 }

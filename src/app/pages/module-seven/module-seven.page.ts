@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModuleSevenPage implements OnInit {
 
+  hideMe1: boolean = false;
+  hideMe2: boolean = false;
+
   constructor() { }
+
+  hide1() {
+    this.hideMe1 = !this.hideMe1;
+  }
+
+  hide2() {
+    this.hideMe2 = !this.hideMe2;
+  }
 
   ngOnInit() {
   }

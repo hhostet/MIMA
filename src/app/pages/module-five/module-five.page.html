@@ -9,70 +9,307 @@
   
   <ion-content class="ion-padding">
       <div class="ion-text-wrap">
-        <h2 class="ion-text-center">Imagery</h2>
-        <h3>5.1 What is Imagery?</h3>
-        <ul>
-          <li>
-            <p>
-              Mental Rehearsal 
-            </p>
-          </li>
-          <li>
-            <p>
-              Mental Pratice
-            </p>
-          </li>
-          <li>
-            <p>
-              "Visualization"
-            </p>
-          </li> 
-        </ul>
-        <ul style="padding-left:60px;">
-          <li>
-            <p>
-              More than visual recall
-            </p>
-          </li>
-          <li>
-            <p>
-              Uses entire range of senses
-            </p>
-          </li>
-        </ul>
-  
-        <ul>
-          <li>
-            <p>
-                Imagery is “a process by which sensory experiences are stored in memory and internally
-                recalled in the absence of external stimuli”(1). Effective imagery uses the entire range of
-                sensory experiences, including kinesthetic and tactile sensations, smells, sounds and
-                emotions. 
-            </p>
-          </li>
-          <li>
-            <p>
-              Imagery has three dimensions: vividness, perspective, and controllability.
-            </p>
-          </li>
-          <li>
-            <p>
-              Vividness refers to the realism and clarity of the imagined experience, which involves
-              imagining multiple senses (e.g., visual, kinesthetic, auditory, olfactory, etc.) that creates an
-              experience that is comparable to the actual situation.
-            </p>
-          </li> 
-          <li>
-            <p>
-              Perspective refers to the visual representation of the imagined experience. It can vary
-              between an internal perspective (i.e., what the performer experiences) or an external
-              perspective (i.e., an observer’s experience while viewing the performance from either a
-              “third person” or “second person” perspective).
-            </p>
-          </li>
-            
-        </ul>
+          <h2 class="ion-text-center"><b>Imagery</b></h2>
+        <ion-button fill="outline" expand="block"(click)="hide1()"><b>5.1 What is Imagery?</b>
+          <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+        </ion-button>
+        <div *ngIf="hideMe1">
+          <h3><b>5.1 What is Imagery?</b></h3>
+          <img src="../../../assets/module_pictures/5.1-1.png" />
+          <ul>
+            <li>
+              <p>
+                  Imagery is “a process by which sensory experiences are stored in memory and internally
+                  recalled in the absence of external stimuli”(1). Effective imagery uses the entire range of
+                  sensory experiences, including kinesthetic and tactile sensations, smells, sounds and
+                  emotions. 
+              </p>
+            </li>
+            <li>
+              <p>
+                Imagery has three dimensions: vividness, perspective, and controllability.
+              </p>
+            </li>
+            <li>
+              <p>
+                Vividness refers to the realism and clarity of the imagined experience, which involves
+                imagining multiple senses (e.g., visual, kinesthetic, auditory, olfactory, etc.) that creates an
+                experience that is comparable to the actual situation.
+              </p>
+            </li> 
+            <li>
+              <p>
+                Perspective refers to the visual representation of the imagined experience. It can vary
+                between an internal perspective (i.e., what the performer experiences) or an external
+                perspective (i.e., an observer’s experience while viewing the performance from either a
+                “third person” or “second person” perspective).
+              </p>
+            </li>
+            <li>
+                <p>
+                  Controllability refers to the ability of an individual to influence the content of 
+                  the imagined experience.  It also refers to both actions and emotions, as imagining 
+                  the management of emotions and attention is crucial to the probability of success in 
+                  real-life pressure situations.
+                </p>
+            </li>
+          </ul>
+        </div>  
+<!--SECTION 5.2-->
+        <ion-button fill="outline" expand="block"(click)="hide2()"><b>5.2 Enhance Performance</b>
+          <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+        </ion-button>
+        <div *ngIf="hideMe2">
+            <h3><b>5.2 How does Imagery Enhance Performance?</b></h3>
+            <img src="../../../assets/module_pictures/5.2-1.png" />
+            <ul>
+                <li>
+                  <p>
+                    When imagining an experience, the same neural patterns of the actual experience are stimulated.  
+                    While the neural firing does not actually trigger movement, the neural pattern is established 
+                    and rehearsed.  Research indicates that the combination of mental and physical practice is superior 
+                    to either physical or mental practice alone. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Imagery is the primary means of influencing the bottom-up neurology that is associated with optimal 
+                    performance in pressure situations.  It can be particularly helpful in preparing to perform in emotionally 
+                    charged situations, as a person can rehearse not only the physical actions and behaviors for optimal performance, 
+                    but also the emotional components for peak performance.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Vividness refers to the realism and clarity of the imagined experience, which involves
+                    imagining multiple senses (e.g., visual, kinesthetic, auditory, olfactory, etc.) that creates an
+                    experience that is comparable to the actual situation.
+                  </p>
+                </li> 
+                <li>
+                  <p>
+                    Optimal use of imagery in applied settings requires the development of a process to mentally rehearse 
+                    an array of challenges that are context specific, for which there may not be a standardized imagery script 
+                    (think back to the metaphor of teaching/learning how to ride a bicycle).
+                  </p>
+                </li>
+            </ul>
+        </div>
+<!--SECTION 5.3-->
+        <ion-button fill="outline" expand="block"(click)="hide3()"><b>5.3 Self-Guided Imagery Techniques</b>
+          <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+        </ion-button>
+        <div *ngIf="hideMe3">
+            <h3><b>5.3 Self-Guided Imagery Techniques for Applied Practice</b></h3>
+            <ul>
+                <li>
+                  <p>
+                    For optimal performance in applied settings, you want to create your own scripts that are 
+                    custom tailored to your performance situations, your strengths and abilities.  
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Your scripts should include visual, cognitive, kinesthetic and other sensory cures,
+                    as well as emotional cues for adjusting your emotional responses.  
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    When initially learning a self-directed imagery script, you are to say the nodal events 
+                    and cues out loud, as it facilitates the learning process and identify areas that may 
+                    need more attention.
+                  </p>
+                </li> 
+                  <ul>
+                    <li>
+                      <p>
+                        <b>Phase 1: Create a self-directed imagery script: </b> Begin by viewing a video of a procedure
+                        and create an Action Plan identifying the nodal events of the procedure.  Make certain 
+                        that your Action Plan includes the sequence of behaviors and actions; multiple sensory 
+                        cues, plus cognitive and emotional cues.
+                      </p>
+                    </li>
+                    <li>
+                        <p>
+                          <b>Phase 2: Familiarize yourself with the mental practice process.</b>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                          <b>Phase 3: Mental Rehearsal. </b>
+                        </p>
+                    </li>
+                  </ul>
+                <li>
+                  <p>
+                    Begin by using the centered breathing technique for rapid relaxation and directing your attention 
+                    to your “bottom-up” awareness. Close your eyes to reduce external visual distractions and mentally 
+                    rehearse the procedure while saying the nodal events and cues out loud.  Again, remember to include
+                    multiple senses and emotions. For example, include visual (e.g., seeing the needle pass through the penrose), 
+                    kinesthetic (e.g., feel the needle driver lock around the needle), and auditory cues (e.g., hear the sound of 
+                    the needle driver locking into place).   
+                  </p>
+                </li>
+            </ul>
+        </div>
+
+        <ion-button fill="outline" expand="block"(click)="hide4()"><b>5.4 Exercise: Suturing</b>
+          <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+        </ion-button>
+        <div *ngIf="hideMe4">
+          <h3><b>5.4 Imagery Exercise: Suturing</b></h3>
+          <ul>
+            <li>
+              <p>
+                <b>Phase 1: Create a self-directed imagery script:</b> Ideally, the Action Plan for suturing that 
+                you created in Module 2 can serve as your imagery script. Review, revise and update the Action Plan, 
+                if needed, to make certain that it includes cues for multiple senses, cognitions, and emotions.  Make 
+                certain that visual and kinesthetic cues are included.
+              </p>
+            </li>
           
+          <p>
+            <b>Exercise:</b> Write your action plan for suturing in the space below (be sure to include specific process 
+            goals for what to do, how to do it, and cues for where to direct your attention)
+          </p>
+          <ion-textarea [(ngModel)]="exFive_One" style="border:solid 1px rgb(90, 90, 90); border-radius: 12px; height:200px;"></ion-textarea>
+          <ion-button shape="round" expand="block" (click)="submitExFive()">Submit Exercise</ion-button>
+          <br>
+              <li>
+                <p>
+                  <b>Phase 2: Familiarize yourself with the mental practice process:</b> Visually review your action plan. As you conduct your 
+                  “cognitive walk-through” of the plan, imagine the sensation of performing each task and nodal event. At each nodal event, 
+                  say out loud the cue for the event.
+                </p>
+              </li>
+              <li>
+                  <p>
+                    <b>Phase 3: Mental Rehearsal:</b> Use the center breathing technique again to relax and center yourself. Then close your eyes 
+                    to reduce external distractions and mentally rehearse the procedure, walking through each step while saying the nodal events 
+                    and cues out loud. Again, be certain to use multiple senses and emotions.
+                  </p>
+                </li>
+            </ul>
+        </div>
+
+        <ion-button fill="outline" expand="block"(click)="hide5()"><b>5.5 Tips and Troubleshooting</b>
+          <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+        </ion-button>
+        <div *ngIf="hideMe5">
+            <h3><b>5.5 Tips and Troubleshooting</b></h3>
+            <h3><b>“Power Tips”</b></h3>
+            <ul>
+              <li>
+                <p>
+                  Always begin with relaxation to optimize rehearsal and access bottom-up neurological processes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Strive for vivid imagery in which you incorporate all your senses, as well as emotions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Experience the image (i.e., a bottom-up neurological process) rather than using the top-down process of remembering it.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Suggestions are merely that – suggestions – and allow the bottom-up mind to help facilitate images and experiences.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Mentally rehearse in slow-motion when initially learning a new procedure or dealing with a challenging situation.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Once you are successful with rehearsal in slow-motion, shift to mental rehearsal in real-time for optimal performance under pressure.
+                </p>
+              </li>
+            </ul>
+            <h3><b>“Troubleshooting Tips”</b></h3>
+            <ul>
+              <li>
+                <p>
+                  <b>Shift perspective of the imagery:</b>
+                </p>
+              </li>
+              <ul>
+                <li>
+                  <p>
+                    Begin by shifting perspective to the 3rd person. Imagine watching another person do the task or procedure.  Imagine what you 
+                    would see the person doing, and what the person is experiencing emotionally.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Next, shift to the 2nd person perspective. If you’re able to successfully imagine in the 3rd person, shift to imagine watching yourself
+                    performing the task/procedure at some time in the future. Again, observe both actions and emotions.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Finally, transition to the first person perspective. After successful mental rehearsal in the 3rd or 2nd person perspective, imagine what 
+                    the observed person is experiencing, sensing and feeling. Once you have achieved the internal perspective of imaging that person’s experience, 
+                    shift to actually being the person having the experience.
+                  </p>
+                </li>
+              </ul>
+              <li>
+                <p>
+                  <b>Back up the starting point of your mental practice.</b>
+                </p>
+              </li>
+              <ul>
+                <li>
+                  <p>
+                    If you repeatedly have difficulty with a specific nodal event or action, back up the starting point of your mental rehearsal
+                    to include the events prior to the challenging situation.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Mentally practice being in your Ideal Performance State and optimally positioned 
+                    for success immediately prior to the challenging situation.  If need be, backup 
+                    the starting point to the very beginning of the procedure and include mental rehearsal 
+                    of your mental and emotional preparation before you actually start.
+                  </p>
+                </li>
+              </ul>
+              <li>
+                <p>
+                  <b>
+                    Imagine performing in “slow motion”.
+                  </b>
+                </p>
+              </li>
+              <ul>
+                <li>
+                  <p>
+                    You can also imagine watching the process in slow motion and mentally halt the imagery 
+                    experience and adjust your emotions and actions is needed, and then continue once you are “on target”.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    For example, if you have difficulty remaining calm and sustaining your IPS during a certain phase of a 
+                    procedure begin by mentally rehearsing and achieving your IPS and then start the procedure in slow motion.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    If at any point you become aware of becoming anxious, you can mentally pause the image; take a few breaths 
+                    to calm and adjust your emotions; and then proceed once you have refocused and achieved your IPS.
+                  </p>
+                </li>
+              </ul>
+            </ul>
+            <p><b>Experiment with integrating these tips while practicing your imagery script.  Write down any thoughts you have on how you can better adapt them to enhance your own use of Imagery.</b></p>
+        </div>
       </div>
   </ion-content>
   

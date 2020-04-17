@@ -1,4 +1,4 @@
-import { Project, ProjectServiceService } from './../../services/project-service.service';
+import { ProjectServiceService } from './../../services/project-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
@@ -14,7 +14,7 @@ const { Geolocation } = Plugins;
   styleUrls: ['./project-details.page.scss'],
 })
 export class ProjectDetailsPage implements OnInit {
-
+/* 
   project: Project = {
     skill_used: '',
     description: '',
@@ -22,7 +22,7 @@ export class ProjectDetailsPage implements OnInit {
     time: '',
     date: '',
     location: ''
-  }
+  } */
 
   public lat:Number;
   public long:Number;
@@ -38,22 +38,22 @@ export class ProjectDetailsPage implements OnInit {
     }
 
   ngOnInit() {
-    let id= this.activatedRoute.snapshot.paramMap.get("id");
+/*     let id= this.activatedRoute.snapshot.paramMap.get("id");
     if(id){
       this.ps.getProject(id).subscribe(project => {
         this.project = project;
-      });
+      }); */
     }
   }
 
-  async getGeoLocation() {
+/*   async getGeoLocation() {
     const coordinates = await Geolocation.getCurrentPosition();
     console.log('Current', coordinates);
     this.lat = coordinates.coords.latitude;
     this.long = coordinates.coords.longitude
-  }
+  } */
 
-  addProject() {
+/*   addProject() {
     this.ps.addProject(this.project).then(
       () => {
         this.router.navigateByUrl('/project-list');
@@ -77,12 +77,12 @@ export class ProjectDetailsPage implements OnInit {
     }, err=>{
       this.showToast("There was an error updating your log");
     });
-  }
+  } */
 
-  showToast(message) {
+/*   showToast(message) {
     this.toastCtrl.create({
       message:message,
       duration: 2000
     }).then(toast => toast.present());
-  }
-}
+  } */
+

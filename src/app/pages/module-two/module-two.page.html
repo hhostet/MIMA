@@ -3,42 +3,42 @@
       <ion-title>Module 2: Action Plans (Goal Setting)</ion-title>
       <ion-buttons slot="start">
           <ion-back-button defaultHref="/modules-list"></ion-back-button>
-        </ion-buttons>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  
-
 
   <ion-content class="ion-padding">
-      <div class="ion-text-wrap">
+
         <h2 class="ion-text-center">Action Plans (Goal Setting)</h2>
 
-        <ion-list>  
-          <ion-button expand="full" (click)="hide1()">2.1 Introduction 
-              <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+          <ion-button fill="outline" expand="block"(click)="hide1()"><b>2.1 Introduction</b>
+            <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
           </ion-button>
           <div *ngIf="hideMe1">
+            <h3>2.1 Introduction</h3>
               <ul>
-                  <li>
-                    <p>Your action plan is your guide for what you want to focus your attention on at any given
+                <li>
+                  <p>Your action plan is your guide for what you want to focus your attention on at any given
                       point in time or circumstance while performing. Focus is a process that involves an
-                      <i>individual</i> performing a task, <i>attention</i> and a <i>target</i>. For optimal performance, your target will always be what you ideally want to <i>achieve</i>, rather than what you want to avoid.</p>
-                  </li>
-                </ul>
+                    <i>individual</i> performing a task, <i>attention</i> and a <i>target</i>. For optimal performance, your target will always be what you ideally want to <i>achieve</i>, rather than what you want to avoid.
+                  </p>
+                </li>
+              </ul>
           
                 <!--picture of soccer goes here-->
           
-                <ul>
-                  <li>
-                    <p>Clear, effective goals impact both focus and effort. They serve as guides in making choices during performance, and provide feedback as to progress and performance.</p>
-                  </li>
-                </ul>
+              <ul>
+                <li>
+                  <p>Clear, effective goals impact both focus and effort. They serve as guides in making choices during performance, and provide feedback as to progress and performance.</p>
+                </li>
+              </ul>
           </div>
-          
-          <ion-button expand="full" (click)="hide2()">2.2 Choosing Effective Goals
-              <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+<!--SECTION 2.2-->          
+          <ion-button fill="outline" expand="block"(click)="hide2()"><b>2.2 Choosing Effective Goals</b>
+            <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
           </ion-button>
           <div *ngIf="hideMe2">
+            <h3>2.2 Choosing Effective Goals</h3>
               <ul>
                   <li>
                     <p>There are 3 types of goals: outcome goals, performance goals and process goals.</p>
@@ -97,22 +97,30 @@
                           <li><b>T</b>ime oriented.</li>
                         </ul>
                       </li>
-                    </ul>
-                  </li>
-                </ul>
+                  </ul>
+                </li>
+              </ul>
           </div>
-      </ion-list>
-      
-        <h3>2.3 ACTION PLAN Comprised of Process Goals</h3>
-  
+
+<!--SECTION 2.3-->
+      <ion-button fill="outline" expand="block"(click)="hide3()"><b>2.3 Action Plan</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe3">
+        <h3>2.3 Action Plan Comprised of Process Goals</h3>
         <ul>
           <li>
             <p>An action plan comprised of process goals provides clear “targets” upon which to focus your attention. It will set your targets for <i>what</i> you do, <i>how</i> you do it, and your <i>mental</i> and <i>emotional state</i> while performing each task.</p>
           </li>
         </ul>
-  
+      </div>
+
+<!--SECTION 2.4-->
+      <ion-button fill="outline" expand="block"(click)="hide4()"><b>2.4 What You Do (Action)</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe4">
         <h3><b>2.4 What You Do (Action)</b></h3>
-  
         <ul>
           <li>
             <p>Process goals that address “what you do” are the stepwise sequences of actions of a
@@ -252,16 +260,14 @@
                   </li>
                 </ol>
               </li>
-  
               <li><p>Create surgeon's knot.</p></li>
               <ion-label>
-                  <ion-item>    
-                      
-                      <ion-datetime [(ngModel)]="date" displayFormat="MMMM/DD/YYYY" pickerFormat="MMM/DD/YYYY" yearValues="2019,2020,2021,2022,2023"></ion-datetime>
-                    </ion-item>
                 <b>Exercise 1:</b> Write down the stepwise actions required to create a surgeon’s knot.
-                <ion-textarea [(ngModel)]="exOne" style="border:solid 1px rgb(168, 168, 168); height:100px; border-radius: 12px;"></ion-textarea>
-                <ion-button shape="round" (click)="submitEx()">Post</ion-button>
+                <ion-textarea [(ngModel)]="exTwo_Zero" style="border:solid 1px rgb(168, 168, 168); height:100px; border-radius: 12px;"></ion-textarea>
+<!--                 <ion-item> Enter Date:  
+                    <ion-datetime [(ngModel)]="date" displayFormat="MMMM/DD/YYYY" pickerFormat="MMM/DD/YYYY" yearValues="2019,2020,2021,2022,2023"></ion-datetime>
+                </ion-item> -->
+               <ion-button shape="round" (click)="submitEx()">Post</ion-button>
               </ion-label>
                 <li>
                 <p>Create second knot</p>
@@ -296,7 +302,13 @@
             </ol>
           </li>
         </ol>
-  
+      </div>
+
+<!--SECTION 2.5-->
+      <ion-button fill="outline" expand="block"(click)="hide5()"><b>2.5 How You Do It (Manner)</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe5">
         <h3><b>2.5 How You Do It (Manner)</b></h3>
   
         <ul>
@@ -309,9 +321,14 @@
               interacting with other members of the treatment team, and provide clear “targets” for how you want to communicate with others, and how you alert the team to concerns.</p>
           </li>
         </ul>
-  
+      </div>
+
+<!--SECTION 2.6-->
+      <ion-button fill="outline" expand="block"(click)="hide6()"><b>2.6 How You Feel</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe6">
         <h3><b>2.6 How You <i>Feel</i> While Performing (Emotions)</b></h3>
-  
         <ul>
           <li>
             <p>A person can know what to do, and the manner in which to do it; yet still struggle with performance if his or her emotions are not optimal for the task at hand. Every person has an Ideal Performance State, sometimes referred to as their IPS, which is their unique combination of emotions when they perform at their best.</p>
@@ -321,7 +338,13 @@
             <p>In performance situations such as surgery, where a person is liable to encounter unexpected challenges beyond one’s control, it becomes increasingly important to optimize those performance factors that you can control. You may not be able to control events; but you can control how you respond to those events.</p>
           </li>
         </ul>
-  
+      </div>
+
+<!--EXERCISES-->
+      <ion-button fill="outline" expand="block"(click)="hide7()"><b>Module 2 Exercises</b>
+        <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
+      <div *ngIf="hideMe7">
         <h5><b>Exercise: Determining your Ideal Performance State (IPS)</b></h5>
   
         <p>Focus on your surgical performance.</p>
@@ -330,31 +353,72 @@
         <p>Concentrate on your own best ever and worst ever performance; do not compare yourself with
           others.</p>
         <br/>
+
+<!--    <ion-label>
+          <ion-item>    
+            <ion-datetime [(ngModel)]="date" displayFormat="MMMM/DD/YYYY" pickerFormat="MMM/DD/YYYY" yearValues="2019,2020,2021,2022,2023"></ion-datetime>
+          </ion-item>
+          <b>Exercise 1:</b> Write down the stepwise actions required to create a surgeon’s knot.
+          <ion-textarea [(ngModel)]="exOne" style="border:solid 1px rgb(168, 168, 168); height:100px; border-radius: 12px;"></ion-textarea>
+          <ion-button shape="round" (click)="submitEx()">Post</ion-button>
+        </ion-label> -->
+
+        <!--EX 1-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 1:</b>
+          <p>Describe the date, place and results of your BEST EVER surgical performance:</p>
+          <ion-textarea [(ngModel)]="exTwo_One" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
+        <!--EX 2-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 2:</b>
+          <p>Provide any important details related to this event and your performance during it (e.g., focus and emotional state before/during, “What was the difference that made the difference?”, etc.)</p>
+          <ion-textarea [(ngModel)]="exTwo_Two" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
+        <!--EX 3-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 3:</b>
+          <p>How did you prepare for this performance mentally?</p>
+          <ion-textarea [(ngModel)]="exTwo_Three" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
+        <!--EX 4-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 4:</b>
+          <p>How did you prepare physically (e.g., nutrition, rest, practice)?</p>
+          <ion-textarea [(ngModel)]="exTwo_Four" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
+        <!--EX 5-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 5:</b>
+          <p>Describe the date, place and results of your WORST EVER performance:</p>
+          <ion-textarea [(ngModel)]="exTwo_Five" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
   
-        <p>Describe the date, place and results of your BEST EVER surgical performance:</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
-        <p>Provide any important details related to this event and your performance during it (e.g., focus and emotional state before/during, “What was the difference that made the difference?”, etc.)</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
-        <p>How did you prepare for this performance mentally?</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
+        <!--EX 6-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 6:</b>
+          <p>Provide any important details related to this event and your performance during it (e.g., focus and emotional state before/during, “What was the difference that made the difference?”, etc.)</p>
+          <ion-textarea [(ngModel)]="exTwo_Six" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
+        <!--EX 7-->
+        <div style="padding-bottom: 25px;">
+          <b>Exercise 7:</b>
+          <p>How did you prepare for this performance mentally?</p>
+          <ion-textarea [(ngModel)]="exTwo_Seven" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
+        <!--EX 8-->
+        <div style="padding-bottom: 25px;"> 
+        <b>Exercise 8:</b>
         <p>How did you prepare physically (e.g., nutrition, rest, practice)?</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
-        <p>Describe the date, place and results of your WORST EVER performance:</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
-        <p>Provide any important details related to this event and your performance during it (e.g., focus and emotional state before/during, “What was the difference that made the difference?”, etc.)</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
-        <p>How did you prepare for this performance mentally?</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
-        <p>How did you prepare physically (e.g., nutrition, rest, practice)?</p>
-        <ion-textarea style="border:solid 1px black; height:200px;"></ion-textarea>
-  
+        <ion-textarea [(ngModel)]="exTwo_Eight" style="border:solid 1px rgb(90, 90, 90); height:100px; border-radius: 12px;"></ion-textarea>
+        </div>
+
         <p><b>Step 2: Identify HELPFUL-Positive and HELPFUL-Negative emotions.</b></p>
   
         <p>Go over the list of HELPFUL – positive (pleasant) emotions below and select up to five words
@@ -367,20 +431,36 @@
         <p><b>HELPFUL-POSITIVE EMOTIONS (P+):</b></p>
   
         <p>active, dynamic, energetic, vigorous <br/> relaxed, comfortable, easy <br/> calm, peaceful, unhurried, quiet <br/> cheerful, merry, happy <br/> confident, certain, sure <br/>delighted, overjoyed, exhilarated <br/>determined, set, settled, resolute <br/> excited, thrilled <br/>brave, bold, daring, dashing <br/> glad, pleased satisfied, contented <br/> inspired, motivated, stimulated <br/> lighthearted, carefree <br/> nice, pleasant, agreeable <br/>quick, rapid, fast, alert</p>
-  
-        <p>Your own emotion: </p> <ion-input style="border:solid 1px black;"></ion-input>
-  
+        <!--POSITIVE EMOTION -->
+        <div style="padding-bottom: 25px;">
+          <p><b>Your own emotion: </b></p> 
+          <ion-input [(ngModel)]="exTwo_Positive" style="border:solid 1px rgb(90, 90, 90); border-radius: 12px;"></ion-input>
+        </div>
+
         <p><b>HELPFUL-NEGATIVE EMOTIONS (N+)</b></p>
-  
         <p>afraid, fearful, scared, panicky <br/> angry, aggressive, furious, violent <br/> annoyed, irritated, distressed <br/> anxious, apprehensive, worried <br/> concerned, alarmed, disturbed, dissatisfied <br/> discouraged, dispirited, depressed <br/> doubtful, uncertain, indecisive, irresolute <br/> helpless, unsafe, insecure <br/>inactive, sluggish, lazy <br/> intense, fierce <br/> jittery, nervous, uneasy, restless <br/> sorry, unhappy, regretful, sad, cheerless <br/> tense, strained, tight, rigid <br/> tired, weary, exhausted, worn out</p>
-  
-        <p>Your own emotion: </p> <ion-input style="border:solid 1px black;"></ion-input>
-  
-        <p><b>Exercise: </b> Write down your action plan for the FLS suturing task. Make sure to personalize your action plan and include specific details that will be relevant to your individual performance (e.g., the language to describe the procedure, including cues on what to focus your attention on, etc.).</p>
-        <ion-textarea style="border:solid 1px black; height:500px;"></ion-textarea>
-  
-        <p><b>Exercise: </b> Develop a <b>SMART</b> process goal for the FLS suturing task. Please update and increase the difficulty of your goal after you achieve it.</p>
-        <ion-textarea style="border:solid 1px black; height:500px;"></ion-textarea>
-      </div>
+        
+        <!--NEGATIVE EMOTION-->
+        <div style="padding-bottom: 25px;">
+          <p><b>Your own emotion: </b></p> 
+          <ion-input [(ngModel)]="exTwo_Negative" style="border:solid 1px rgb(90, 90, 90); border-radius: 12px;"></ion-input>
+        </div>
+
+        <!--EX 9-->
+        <div style="padding-bottom: 25px;"> 
+          <b>Exercise 9: </b> 
+          <p>Write down your action plan for the FLS suturing task. Make sure to personalize your action plan and include specific details that will be relevant to your individual performance (e.g., the language to describe the procedure, including cues on what to focus your attention on, etc.).</p>
+          <ion-textarea [(ngModel)]="exTwo_Nine" style="border:solid 1px rgb(90, 90, 90); border-radius: 12px; height:500px;"></ion-textarea>
+        </div>
+
+        <!--EX 10-->
+        <div style="padding-bottom: 25px;"> 
+          <b>Exercise 10:</b>
+          <p> Develop a <b>SMART</b> process goal for the FLS suturing task. Please update and increase the difficulty of your goal after you achieve it.</p>
+          <ion-textarea [(ngModel)]="exTwo_Ten" style="border:solid 1px rgb(90, 90, 90); border-radius: 12px; height:500px;"></ion-textarea>
+        </div>
+        <ion-button shape="round" expand="block" (click)="submitEx()">Submit Exercises</ion-button>
+      
+    </div>
   </ion-content>
   

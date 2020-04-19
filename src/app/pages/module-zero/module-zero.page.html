@@ -6,14 +6,21 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+
   <ion-content class="ion-padding">
-      <div class="ion-text-wrap">
-        <h2 class="ion-text-center"><b>Introduction and Overview to Mental Skills Training</b></h2>
-        <a href="https://www.youtube.com/watch?v=yS2wT9SuafU&feature=youtu.be">Module 0 Video</a>
-        <br>
-        <ion-button fill="outline" expand="block"(click)="hide1()"><b>0.1 Introduction</b>
-            <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
-        </ion-button>
+    <div class="ion-text-wrap">
+      <h2 class="ion-text-center"><b>Introduction and Overview to Mental Skills Training</b></h2>
+      <div class="ion-text-center">
+        <br/><br/>
+        <iframe src="https://www.youtube.com/embed/yS2wT9SuafU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br/>
+        <a href="https://www.youtube.com/watch?v=yS2wT9SuafU">Module 0 Video</a>
+        <br/><br/>
+      </div>
+
+      <ion-button fill="outline" expand="block"(click)="hide1()"><b>0.1 Introduction</b>
+          <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+      </ion-button>
         <div *ngIf="hideMe1">
             <h3><b>0.1 Introduction</b></h3>
             <ul>

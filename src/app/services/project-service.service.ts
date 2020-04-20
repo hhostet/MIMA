@@ -11,6 +11,31 @@ export interface Post {
   skillUsed: string;
 }
 
+export interface Exercise{
+  exTwo_Zero: string;
+  exTwo_One: string;
+  exTwo_Two: string;
+  exTwo_Three: string;
+  exTwo_Four: string;
+  exTwo_Five: string;
+  exTwo_Six: string;
+  exTwo_Seven: string;
+  exTwo_Eight: string;
+  exTwo_Nine: string;
+  exTwo_Ten: string;
+  exTwo_Positive: string;
+  exTwo_Negative: string;
+  exFour_Negative: string;
+  exFour_Counter: string;
+  exFive_One: string;
+}
+
+export interface User {
+  username:string;
+  timeStamp: Date;
+
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,10 +43,22 @@ export class ProjectServiceService {
   private posts: Observable<Post[]>;
   private postCollection:AngularFirestoreCollection<Post>;
 
+  private exercises: Observable<Exercise[]>;
+  private exerciseCollection:AngularFirestoreCollection<Exercise>;
+
+  private users: Observable<User[]>;
+  private userCollection:AngularFirestoreCollection<User>;
+
   constructor(private afs:AngularFirestore) {
 
     this.postCollection = this.afs.collection<Post>('posts');
     this.posts = this.postCollection.valueChanges();
+
+    this.exerciseCollection = this.afs.collection<Exercise>('exercises');
+    this.exercises = this.exerciseCollection.valueChanges();
+
+    this.userCollection = this.afs.collection<User>('users');
+    this.users = this.userCollection.valueChanges();
     
 /*     this.postCollection = this.afs.collection<Post>("posts");
     this.posts = this.postCollection.snapshotChanges().pipe(
@@ -41,6 +78,13 @@ export class ProjectServiceService {
      return this.posts;
    }
 
+   getExercises():Observable<Exercise[]> {
+    return this.exercises;
+  }
+
+  getUsers():Observable<User[]> {
+    return this.users;
+  }
 /*    getProject(id: string):Observable<Post> {
      return this.postCollection.doc<Post>(id).valueChanges().pipe(
        take(1),

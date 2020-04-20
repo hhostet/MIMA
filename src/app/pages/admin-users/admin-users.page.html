@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>admin-users</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/admin-home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="image" *ngFor="let user of users | async">
+        <ion-card >
+            <ion-card-header>
+              <ion-card-subtitle>
+                  {{ user.username }}
+              </ion-card-subtitle>
+            </ion-card-header>
+        </ion-card>
+      </div>
+</ion-content>

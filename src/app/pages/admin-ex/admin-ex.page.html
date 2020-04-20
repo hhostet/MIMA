@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exercises</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/admin-home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image" *ngFor="let exercise of exercises | async">
+    <ion-card >
+        <ion-card-header>
+           <ion-card-title>
+              {{ exercise.author }}
+          </ion-card-title> 
+        </ion-card-header>
+        <ion-card-content>
+            <div>
+              <ion-card-subtitle>Module 2 Exercises</ion-card-subtitle>
+              <ul>
+              <li>
+                {{ exercise?.module02[0] }}
+              </li>
+              <li>
+                {{ exercise?.module02[1] }}
+              </li>
+              <li>
+                {{ exercise?.module02[2] }}
+              </li>
+              <li>
+                {{ exercise?.module02[3] }}
+              </li>
+              <li>
+                {{ exercise?.module02[4] }}
+              </li>
+              <li>
+                {{ exercise?.module02[5] }}
+              </li>
+              <li>
+                {{ exercise?.module02[6] }}
+              </li>
+              <li>
+                {{ exercise?.module02[7] }}
+              </li>
+              <li>
+                {{ exercise?.module02[8] }}
+              </li>
+              <li>
+                {{ exercise?.module02[9] }}
+              </li>
+              <li>
+                {{ exercise?.module02[10] }}
+              </li>
+              <li>
+                {{ exercise?.module02[11] }}
+              </li>
+              <li>
+                {{ exercise?.module02[12] }}
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ion-card-subtitle>Module 4 Exercises</ion-card-subtitle>
+            <ul>
+            <li>
+              {{ exercise?.module04[0] }}
+            </li>
+            <li>
+              {{ exercise?.module04[1] }}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ion-card-subtitle>Module 5 Exercises</ion-card-subtitle>
+          <ul>
+          <li>
+            {{ exercise?.module05[0] }}
+          </li>
+        </ul>
+      </div>
+    </ion-card-content>
+  
+   
+
+
+
+        <!-- <ion-card-content>
+          <ion-card-subtitle>
+            <b>Skill Used</b>
+          </ion-card-subtitle>
+          <p>
+              {{ post.desc }}
+          </p>
+          <ion-card-subtitle>
+            <b>Description</b>
+          </ion-card-subtitle>
+          <p>
+          {{ post.desc }}
+          </p>
+          <ion-card-subtitle>
+            <b>Effects:</b>
+          </ion-card-subtitle>
+          <p>
+              {{ post.effect }}
+          </p>
+        </ion-card-content> -->
+    </ion-card>
+  </div>
+
+</ion-content>

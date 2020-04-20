@@ -126,62 +126,62 @@ export class ModuleTwoPage implements OnInit {
     
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise One: ${exTwo_One}`),
+          `Describe the date, place and results of your BEST EVER surgical performance: ${exTwo_One}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Two:  ${exTwo_Two}`),
+          `Provide any important details related to this event: ${exTwo_Two}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Three: ${exTwo_Three}`),
+          `How did you prepare for this performance mentally?: ${exTwo_Three}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Four: ${exTwo_Four}`),
+          `How did you prepare physically? ${exTwo_Four}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Five: ${exTwo_Five} `),
+          `Describe the date, place and results of your WORST EVER performance: ${exTwo_Five} `),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Six: ${exTwo_Six}`),
+          `Provide any important details related to this event and your performance during it: ${exTwo_Six}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Seven: ${exTwo_Seven}`),
+          `How did you prepare for this performance mentally?: ${exTwo_Seven}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Eight: ${exTwo_Eight}`),
+          `How did you prepare physically (e.g., nutrition, rest, practice)?: ${exTwo_Eight}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Nine: ${exTwo_Nine}`),
+          `Write down your action plan for the FLS suturing task: ${exTwo_Nine}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Exercise Ten: ${exTwo_Ten}`),
+          `Develop a SMART process goal for the FLS suturing task: ${exTwo_Ten}`),
       }) 
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Positive Emotions: ${exTwo_Positive}`),
+          `Helpful Positive Emotions: ${exTwo_Positive}`),
       })
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).update({
         module02: firestore.FieldValue.arrayUnion(
-          `Negative Emotions: ${exTwo_Negative}`),
+          `Helpful Negative Emotions: ${exTwo_Negative}`),
       })
 
 /*       [Exercise One: ${exTwo_One}]

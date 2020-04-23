@@ -14,7 +14,6 @@ If you are familiar with Github Desktop, cloning the files is suggested. However
     *NOTE: Due to the size of the file, extraction will take a while
 4.	Once extracted, code can be accessed in text editor of choice
 
-
 ### Prerequisites
 
 This app was built using Ionic Angular and Firebase firestore. In order to deploy this project on a live system, these programs need to be installed.
@@ -47,6 +46,15 @@ ionic serve
 
 This will open the application on a web browser, and will allow you to view application.
 
+### Accessing Files
+
+To access TS and HTML files:
+1.	Open code files in a text editor of your choice (Visual Studio Code, PHP Storm, etc.) 
+2.	Go to src -> app -> pages 
+3.	This will show a list of all pages on the app
+    * Each module has its own page
+    * Log-post and uploader serve as create and display logs 
+    * Login, user-account, and create-account all serve as create account or login functions
 
 ## Built With
 

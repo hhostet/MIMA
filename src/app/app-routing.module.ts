@@ -11,18 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/modules-list/modules-list.module').then( m => m.ModulesListPageModule)
   },
   {
-    path: 'project-list',
-    loadChildren: () => import('./pages/project-list/project-list.module').then( m => m.ProjectListPageModule)
-  },
-  {
-    path: 'project',
-    loadChildren: () => import('./pages/project-details/project-details.module').then( m => m.ProjectDetailsPageModule)
-  },
-  {
-    path: 'project-details/:id',
-    loadChildren: () => import('./pages/project-details/project-details.module').then( m => m.ProjectDetailsPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
@@ -77,10 +65,6 @@ const routes: Routes = [
   {
     path: 'profile-page',
     loadChildren: () => import('./pages/profile-page/profile-page.module').then( m => m.ProfilePagePageModule), canActivate:[AuthService]
-  },
-  {
-    path: 'edit-profile',
-    loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule), canActivate:[AuthService]
   },
   {
     path: 'admin-home',

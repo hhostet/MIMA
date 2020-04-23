@@ -10,7 +10,6 @@
 <ion-content padding>
   <ion-card *ngIf="post | async as postData">
     <ion-card-content>
-      <p>{{postID}}</p>
       <p>{{ postData.author }}</p>
       <p>{{ postData.date | date: "MMMM dd yyyy"}}</p>
       <p>{{ postData.skillUsed }}</p>

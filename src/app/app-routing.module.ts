@@ -81,7 +81,19 @@ const routes: Routes = [
   {
     path: 'admin-users',
     loadChildren: () => import('./pages/admin-users/admin-users.module').then( m => m.AdminUsersPageModule)
+  },  {
+    path: 'module-eight',
+    loadChildren: () => import('./pages/module-eight/module-eight.module').then( m => m.ModuleEightPageModule)
+  },
+  {
+    path: 'module-nine',
+    loadChildren: () => import('./pages/module-nine/module-nine.module').then( m => m.ModuleNinePageModule)
+  },
+  {
+    path: 'module-ten',
+    loadChildren: () => import('./pages/module-ten/module-ten.module').then( m => m.ModuleTenPageModule)
   }
+
 ];
 
 @NgModule({

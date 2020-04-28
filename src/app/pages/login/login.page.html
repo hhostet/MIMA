@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Mental Skills Cirriculum</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 	<ion-list>
-
+		<img src="../../../assets/module_pictures/logo.png" />
 		<ion-item>
 		  <ion-label position="floating">Email</ion-label>
 		  <ion-input type="text" [(ngModel)]="username"></ion-input>
@@ -16,9 +16,8 @@
 		  <ion-label position="floating">Password</ion-label>
 		  <ion-input type="password" [(ngModel)]="password"></ion-input>
 		</ion-item>
-	  
 	  </ion-list>
-
+		<br>
 		<ion-button fill="solid" expand="block" (click)="login()">Login</ion-button>
 		<br>
 		

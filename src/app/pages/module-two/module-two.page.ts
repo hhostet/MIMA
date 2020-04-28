@@ -48,7 +48,7 @@ export class ModuleTwoPage implements OnInit {
   hideMe6: boolean = false;
   hideMe7: boolean = false;
 
-  timeStamp: Date;
+  mod02timeStamp: Date;
 
   constructor(
     public afstore: AngularFirestore,
@@ -110,12 +110,12 @@ export class ModuleTwoPage implements OnInit {
       const exTwo_Positive= this.exTwo_Positive
       const exTwo_Negative= this.exTwo_Negative
 
-      const timeStamp = firestore.FieldValue.serverTimestamp()
+      const mod02timeStamp = firestore.FieldValue.serverTimestamp()
           //const id = this.afstore.ref().child('exercises').push.key;
       console.log("clicked")
 
       this.afstore.doc(`users/${this.user.getUID()}`).update({
-        module02_timestamp: timeStamp
+        module02_timestamp: mod02timeStamp
       })
 
       this.afstore.doc(`exercises/${this.user.getUID()}`).set({

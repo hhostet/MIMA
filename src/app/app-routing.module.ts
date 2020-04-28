@@ -81,6 +81,14 @@ const routes: Routes = [
   {
     path: 'admin-users',
     loadChildren: () => import('./pages/admin-users/admin-users.module').then( m => m.AdminUsersPageModule)
+  },
+  {
+    path: 'project-details',
+    loadChildren: () => import('./pages/project-details/project-details.module').then( m => m.ProjectDetailsPageModule)
+  },
+  {
+    path: 'project-list',
+    loadChildren: () => import('./pages/project-list/project-list.module').then( m => m.ProjectListPageModule)
   }
 ];
 

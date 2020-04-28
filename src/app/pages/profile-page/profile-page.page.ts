@@ -19,6 +19,7 @@ export class ProfilePagePage implements OnInit {
   sub
   username: string
   profilePic: string
+  mod02timeStamp: string;
   posts
   uid
 
@@ -34,6 +35,7 @@ export class ProfilePagePage implements OnInit {
       this.posts = event.posts
       this.username = event.username
       this.profilePic = event.profilePic
+      this.mod02timeStamp = event.mod02timeStamp
     })
 
    }

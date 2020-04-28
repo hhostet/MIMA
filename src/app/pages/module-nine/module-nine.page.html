@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Module 9: Blank</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/modules-list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-wrap">
+    <h2 class="ion-text-center"><b>Blank</b></h2>
+    <div class="ion-text-center">
+      <br/><br/>
+      <!--insert embedded YouTube video HTML here-->
+      <br/>
+      <a href="#">Module 9 Video</a>
+      <br/><br/>
+    </div>
+
+<!--SECTION 9.1-->
+  <ion-button fill="outline" expand="block"(click)="hide1()"><b>9.1 Blank</b>
+      <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+  </ion-button>
+  <div *ngIf="hideMe1">
+    <h3><b>9.1 Blank</b></h3>
+    <!--insert 9.1 content here-->
+  </div>
+
+<!--SECTION 9.2-->
+  <ion-button fill="outline" expand="block"(click)="hide2()"><b>9.2 Blank</b>
+    <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+  </ion-button>
+  <div *ngIf="hideMe2">
+    <h3><b>9.2 Blank</b></h3>
+    <!--insert 9.2 content here-->
+  </div>
+
+<!--SECTION 9.3-->
+  <ion-button fill="outline" expand="block"(click)="hide3()"><b>9.3 Blank</b>
+    <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+  </ion-button>
+  <div *ngIf="hideMe3">
+    <h3><b>9.3 Blank</b></h3>
+    <!--insert 9.3 content here-->
+  </div>
+
+<!--SECTION 9.4-->
+  <ion-button fill="outline" expand="block"(click)="hide4()"><b>9.4 Blank</b>
+    <ion-icon style=" font-size: 30px; padding-left:20px;" name="arrow-dropdown"></ion-icon>
+  </ion-button>
+  <div *ngIf="hideMe4">  
+    <h3><b>9.4 Blank</b></h3>
+    <!--insert 9.4 content here-->
+  </div>
+</div>   
+</ion-content> 
+   
